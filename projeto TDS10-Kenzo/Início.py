@@ -10,7 +10,7 @@ while resposta == "s":
             \r====[1] Registrar cliente                     =====
             \r====[2] Listar clientes                       =====
             \r====[3] Excluir cliente                       =====
-            \r====[4] Buscar celular                        =====           
+            \r====[4] Pesquisar Cliente                     =====           
             \r====[5] Sair                                  =====
             \r==================================================='''                                  
 
