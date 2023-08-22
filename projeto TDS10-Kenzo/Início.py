@@ -1,7 +1,7 @@
 import Registro
 import listar
 import Excluir
-import Buscar
+import Pesquisar
 
 resposta = "s"
 
@@ -25,7 +25,7 @@ while resposta == "s":
     elif opcao == 3:
         Excluir.Excluir_cliente()
     elif opcao == 4: 
-        Buscar.Buscar_celular()
+        Pesquisar.pesquisar_cliente()
     elif opcao == 5:
         exit
         break
