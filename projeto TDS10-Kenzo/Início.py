@@ -3,7 +3,7 @@ import listar
 import Excluir
 import Pesquisar
 import csv
-
+import emitir_ata
 
 resposta = "s"
 
@@ -13,7 +13,8 @@ while resposta == "s":
             \r====[2] Listar clientes                       =====
             \r====[3] Excluir cliente                       =====
             \r====[4] Pesquisar Cliente                     =====           
-            \r====[5] Sair                                  =====
+            \r====[5] Iniciar Ata                           =====
+            \r====[6] Sair                                  =====
             \r==================================================='''                                  
 
     print(menu)
@@ -28,7 +29,9 @@ while resposta == "s":
         Excluir.excluir_cliente()
     elif opcao == 4: 
         Pesquisar.pesquisar_cliente()
-    elif opcao == 5:
+    elif opcao == 5: 
+        emitir_ata.iniciar_ata()
+    elif opcao == 6:
         exit
         break
     else:
