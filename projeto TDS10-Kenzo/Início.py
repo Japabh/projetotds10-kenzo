@@ -1,7 +1,9 @@
-import Registro
+import Registrar
 import listar
 import Excluir
 import Pesquisar
+import csv
+
 
 resposta = "s"
 
@@ -19,11 +21,11 @@ while resposta == "s":
     opcao = int(input("Escolha uma opçao: "))
 
     if opcao == 1:
-        Registro.Registrar_cliente()
+        Registrar.registrar_cliente()
     elif opcao == 2:
         listar.listar_cliente()
     elif opcao == 3:
-        Excluir.Excluir_cliente()
+        Excluir.excluir_cliente()
     elif opcao == 4: 
         Pesquisar.pesquisar_cliente()
     elif opcao == 5:
@@ -33,4 +35,11 @@ while resposta == "s":
         print("Digite uma opçao valida!")
 
     resposta = input("Deseja continuar? [s/n]")
-    
+
+
+registrar_cliente = 'exemplo.csv'
+
+with open(registrar_cliente, 'r') as arquivo:
+    leitor_csv = csv.reader(arquivo)
+    for linha in leitor_csv:
+        print(linha)

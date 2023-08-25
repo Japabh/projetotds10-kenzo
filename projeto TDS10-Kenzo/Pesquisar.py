@@ -15,12 +15,25 @@ def pesquisar_cliente(nome_cliente):
 
 def celular(numero_celular):
     celular_csv = open('celular.csv')#abrindo o arquivo CSV
-    dados_livro = csv.DictReader(celular_csv, delimiter=";")# lendo o conteudo
+    dados_celular = csv.DictReader(celular_csv, delimiter=";")# lendo o conteudo
 
-    for livros in dados_livro:
-        if(livros["codigo"].lower() == numero_celular.lower()):
-            codigo=(livros["codigo"])
-            nome=(livros["nome"])
-            return (True, codigo, nome)
+    for celular in dados_celular:
+        if(celular["celular"].lower() == numero_celular.lower()):
+            celular=(celular["celular"])
+            nome=(celular["número"])
+            return (True, celular, nome)
+            break
+    return False
+
+
+def cpf(numero_cpf):
+    cpf_csv = open('cpf.csv')#abrindo o arquivo CSV
+    dados_cpf = csv.DictReader(cpf_csv, delimiter=";")# lendo o conteudo
+
+    for cpf in dados_cpf:
+        if(cpf ["cpf"].lower() == numero_cpf.lower()):
+            cpf=(cpf["cpf"])
+            nome=(cpf["número"])
+            return (True, cpf, nome)
             break
     return False
